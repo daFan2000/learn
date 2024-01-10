@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      /* 方式1：默认字体大小 */
+      font-size: 16px;
+
+      /* 方式2：了解：em，没设置时，相对于浏览器默认大小16px */
+      font-size: 2em;
+    }
+    .home {
+      font-size: 20px;
+    }
+    .box2 {
+      /* 相对于父元素字体的尺寸，但是box2不设置font-size时，box2会继承home的font-size，也可以理解为继承后的自己字体的大小 */
+      font-size: 2em;
+    }
+    .box3 {
+      /* 方式3：百分比%,相对于父元素的百分比 */
+      font-size: 200%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">我是div元素</div>
+  <div class="home">
+    <div class="box2">我也是div元素</div>
+  </div>
+  <div class="box3">我是div3元素</div>
+</body>
+</html>

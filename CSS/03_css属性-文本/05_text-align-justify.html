@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      background-color: red;
+      color: #fff;
+      width: 220px;
+
+      /* 默认最后一行无效：有利于阅读性 */
+      text-align: justify;
+      /* 使最后一行生效 */
+      text-align-last: justify;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    When a browser requests a resource from a (third party) server, that cross-origin's domain name must be resolved to an IP address before the browser can issue the request. This process is known as DNS resolution. While DNS caching can help to reduce this latency, DNS resolution can add significant latency to requests. For websites that open connections to many third parties, this latency can significantly reduce loading performance.
+  </div>
+</body>
+</html>
