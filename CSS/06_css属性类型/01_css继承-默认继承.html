@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 常见的继承属性： */
+    div.box1 {
+      color: red;
+      cursor: pointer;
+      font-size: 20px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: normal;
+      font-style: italic;
+      font-variant: small-caps;
+      font: small-caps 1.5em sans-serif;
+      letter-spacing: normal;
+      line-height: normal;
+      list-style: none;
+      text-align: center;
+      text-indent: 0%;
+      text-transform: capitalize;
+      text-shadow: none;
+      visibility: collapse;
+      white-space: nowrap;
+      word-break: break-all;
+      word-spacing: normal;
+      word-wrap: none;
+    }
+
+    /* 继承的时计算值，不是设置值 */
+    .box2 {
+      color: rebeccapurple;
+      /* 相对于自身字体（父元素字体），浏览器16px，2em计算后是32px */
+      font-size: 2em;
+    }
+    .p {
+      /* 原理上讲，p的font-size也是2em计算过后是64px，但是由于继承的是计算属性，所以font-size是box2的字体大小32px */
+    }
+
+    /* 强制继承 */
+    .box3 {
+      color: red;
+      border: 1px solid palegreen;
+    }
+    .box3 p {
+      /* 强制继承父元素的border值 */
+      border: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box1">
+    <span>Hahaha</span>
+    <p>
+      <span>Laaallll</span>
+    </p>
+  </div>
+
+  <div class="box2">
+    box2本身的内容
+    <p>我是p元素</p>
+  </div>
+
+  <div class="box3">
+    box3本身的内容
+    <p>我是p元素</p>
+  </div>
+
+</body>
+</html>

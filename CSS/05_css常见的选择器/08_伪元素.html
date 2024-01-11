@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      background-color: aqua;
+    }
+    /* frist-line:首行 */
+    .box::first-line {
+      color: orange;
+      font-size: 30px;
+    }
+    /* first-letter:首字母 */
+    .box::first-letter {
+      font-size: 50px;
+      color: red;
+    }
+
+    /* ::before:使用时不会有空格:单纯的通过元素在元素之前或之后添加元素会因为换行让两个元素之间产生间隙;且代码更简洁 */
+    .item::before {
+      content: "321";
+      font-size: 30px;
+      color: green;
+    }
+    /* ::after */
+    .item::after {
+      /* content: "abc"; */
+      content: url("../image/hot.png");
+      font-size: 50px;
+      color: aquamarine;
+    }
+
+    /* 补充,在使用伪元素时，如果不需要content时，设置content：“”，content不能省略 */
+    .home3::after {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    以像素值（px）设置字体大小是需要像素级精度时的不错选择。px 值是静态的。这是一种跨操作系统和跨浏览器的方式，
+    可以确切地告诉浏览器以你指定的像素高度呈现字母。因为可能使用不同的算法来实现类似的效果，结果可能在不同浏览器间略有差异。
+    字体大小设置也可以组合使用。例如，如果父元素设置为 16px，其子元素设置为 larger，则子元素在页面上显示比父元素更大。
+  </div>
+
+  <div class="home1 item">my name is home1</div>
+  <div class="home2 item">my name is home2</div>
+
+  <div class="home3">my name is home3</div>
+</body>
+</html>

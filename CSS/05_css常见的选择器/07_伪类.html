@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 伪类是选择特定元素状态的选择器 */
+    /* 鼠标悬浮颜色变化 */
+    div:hover {
+      color: red;
+    }
+
+    /* 1.动态伪类 */
+    /* 从来没有被访问过，如果被访问过，需要清除缓存才有效果 */
+    a:link {
+      color: red;
+    }
+    /* 被访问过的状态 */
+    a:visited {
+      color: aqua;
+    }
+    /* a,input元素聚焦的状态:使用tab制表键选择 */
+    a:focus {
+      color: purple;
+    }
+    /* 鼠标悬浮 */
+    a:hover {
+      color: blue;
+    }
+    /* 点下去，但是还没有松手 */
+    a:active {
+      color: peru;
+    }
+    /* 所有状态下同样样式 */
+    a {
+      margin: 0;
+    }
+
+    /* 2.目标伪类：:target，匹配路由中的字段和元素 */
+
+    /* 3.语言伪类：:lang(en),选择英文 */
+
+    /* 4.元素状态伪类 */
+
+    /* 5.结构伪类 */
+
+    /* 6.否定伪类：:not() */
+  </style>
+</head>
+<body>
+
+  <div class="home">我是div1元素</div>
+  <div class="home">我是div2元素</div>
+  <div class="home">我是div3元素</div>
+
+  <a href="https://www.mi.com/">我是a元素</a>
+  
+</body>
+</html>

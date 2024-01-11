@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      /* 
+        行高：两行文字基线之间的距离，
+        一行文字结构大概为：
+        上外边距，顶线，顶中线距，中线，中基线距，基线，基底线距，下外边距，
+        两行文字之间的基线距离可以转化为上外边距顶部与下外边部底部之间的距离，
+        假设文字大小font-size为16px，line-height为40px，则上下两外边距之和为40 - 16 = 24px，
+        即上行文字的底线与下行文字的定弦之间的距离（行距）为24px
+       */
+      /* 详解链接：https://zhuanlan.zhihu.com/p/352965852?utm_id=0 */
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">my name is div</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 后代选择器 */
+    .box span {
+      color: red;
+    }
+    /* 直接子代选择器 */
+    .home > span {
+      color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <div class="home">
+    <span>lllllll</span>
+    <div class="box">
+      <p></p>
+      <span>红红火火会</span>
+    </div>
+
+    <div class="content">
+      <div class="desc">
+        <p>
+          <span class="home-item">hhhh</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <span>wwwwww</span>
+</body>
+</html>
