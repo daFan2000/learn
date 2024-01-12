@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1 {
+      /* 会继承（不严格，影响子元素），元素存在html结构中，但是不显示，不占据位置和空间 */
+      display: none;
+    }
+    
+    .div2 {
+      /* 会继承 */
+      /* 依然占据空间，只是对于用户不可见 */
+      visibility: hidden;
+    }
+
+    .div3 {
+      /* 通过颜色隐藏，还是能看见 */
+      /* rgba的a（透明度0-1）设置为0 */
+      color: rgba(255, 0, 0, 0);
+      /* 或者用十六进制，最后两位代表透明度0-255，推荐上面那种，下面有的浏览器不适配 */
+      color: #ff000000;
+    }
+
+    .div4 {
+      /* 通过背景颜色透明度来隐藏 */
+      background-color: rgba(0, 0, 0, 0);
+      background-color: transparent; /* rgba(0, 0, 0, 0); */
+    }
+    
+    .div5 {
+      /* 具有继承性（不严格，影响子元素），设置透明度0-1 */
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="div1">我是div1元素</div>
+  <div class="div2">我是div2元素</div>
+  <div class="div3">我是div3元素</div>
+  <div class="div4">我是div4元素</div>
+  <div class="div5">我是div5元素</div>
+
+</body>
+</html>

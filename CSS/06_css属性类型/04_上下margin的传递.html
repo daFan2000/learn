@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: #f00;
+    }
+    .container {
+      width: 100px;
+      height: 100px;
+      background-color: #0f0;
+
+      /* 左右不会传递 */
+      margin-left: 30px;
+
+      /* 
+        子元素的margin-top会传递给父元素，进而导致父元素有margin，
+        如果想让元素内的子元素与父元素之间产生距离时最好使用pedding，
+        官方文档中定义pedding用于元素与元素内容之间的距离，
+        虽然元素内子元素可以用margin，但是其也属于元素内的内容
+      */
+      margin-top: 30px;
+
+      /* 
+        如果想去掉margin的传递，可以用以下方法解决：
+        1.给父元素设置边框
+        2.使用pedding
+        3.给父元素添加overflow:auto，触发BFC
+      */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 行内元素设置margin，pedding无效 -->
+  <div class="box">
+    <div class="container"></div>
+  </div>
+
+</body>
+</html>
