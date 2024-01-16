@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content {
+      background-color: aqua;
+      color: wheat;
+
+      /* 内容：width/height根本不会生效 */
+      width: 200px;
+      height: 200px;
+
+      /* 内边距padding：上下会被撑起，不占据空间，只对左右生效 */
+      padding: 50px;
+
+      /* 边框border： 上下会被撑起，不占据空间，只对左右生效*/
+      border: 50px solid rebeccapurple;
+
+      /* 外边距：Margin：上下的margin不生效 */
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <span class="content">哈哈哈哈</span>
+  <div>aaa</div>
+  
+</body>
+</html>

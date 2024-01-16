@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  width: 295px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+.container img {
+  width: 295px;
+  height: 165px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.title {
+  margin-top: 3px;
+  /* 多行文字溢出显示三个. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.title-text {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.author {
+  color: #9499A0;
+  font-size: 13px;
+}
+
+.author::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: aqua;
+  position: relative;
+  top: 4px;
+}
